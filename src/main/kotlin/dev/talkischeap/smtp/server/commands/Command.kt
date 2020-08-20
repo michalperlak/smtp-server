@@ -1,49 +1,49 @@
 package dev.talkischeap.smtp.server.commands
 
-sealed class SmtpCommand {
+sealed class Command {
     abstract val name: String
 }
 
-object HelloCommand : SmtpCommand() {
+object HelloCommand : Command() {
     override val name: String = "HELLO"
 }
 
-object ExtendedHelloCommand : SmtpCommand() {
+object ExtendedHelloCommand : Command() {
     override val name: String = "EHLO"
 }
 
-object MailCommand : SmtpCommand() {
+object MailCommand : Command() {
     override val name: String = "MAIL"
 }
 
-object RecipientCommand : SmtpCommand() {
+object RecipientCommand : Command() {
     override val name: String = "RCPT"
 }
 
-object DataCommand : SmtpCommand() {
+object DataCommand : Command() {
     override val name: String = "DATA"
 }
 
-object ResetCommand : SmtpCommand() {
+object ResetCommand : Command() {
     override val name: String = "RSET"
 }
 
-object VerifyCommand : SmtpCommand() {
+object VerifyCommand : Command() {
     override val name: String = "VRFY"
 }
 
-object ExpandCommand : SmtpCommand() {
+object ExpandCommand : Command() {
     override val name: String = "EXPN"
 }
 
-object HelpCommand : SmtpCommand() {
+object HelpCommand : Command() {
     override val name: String = "HELP"
 }
 
-object NoopCommand : SmtpCommand() {
+object NoopCommand : Command() {
     override val name: String = "NOOP"
 }
 
-object QuitCommand : SmtpCommand() {
+object QuitCommand : Command() {
     override val name: String = "QUIT"
 }
