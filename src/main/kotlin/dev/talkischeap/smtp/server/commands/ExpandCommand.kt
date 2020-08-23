@@ -6,5 +6,5 @@ class ExpandCommand: Command {
     override val name: String = "EXPN"
 
     override fun execute(arguments: CommandArguments): CommandResponse =
-            CommandResponse(SmtpStatus.CANNOT_VERIFY_USER, "COMMAND DISABLED")
+            CommandResponse(SmtpStatus.CANNOT_VERIFY_USER, "Command disabled")
 }

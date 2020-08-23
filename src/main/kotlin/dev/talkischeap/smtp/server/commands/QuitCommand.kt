@@ -6,5 +6,5 @@ class QuitCommand: Command {
     override val name: String = "QUIT"
 
     override fun execute(arguments: CommandArguments): CommandResponse =
-            CommandResponse(SmtpStatus.SERVER_CLOSING_TRANSMISSION_CHANNEL, "BYE")
+            CommandResponse(SmtpStatus.SERVER_CLOSING_TRANSMISSION_CHANNEL, "See you")
 }

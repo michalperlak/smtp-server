@@ -6,5 +6,5 @@ class NoopCommand: Command {
     override val name: String = "NOOP"
 
     override fun execute(arguments: CommandArguments): CommandResponse =
-            CommandResponse(SmtpStatus.REQUESTED_ACTION_COMPLETED, "OK")
+            CommandResponse(SmtpStatus.REQUESTED_ACTION_COMPLETED, "Ok")
 }
