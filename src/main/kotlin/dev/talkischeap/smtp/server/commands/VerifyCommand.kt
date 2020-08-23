@@ -6,5 +6,5 @@ class VerifyCommand: Command {
     override val name: String = "VRFY"
 
     override fun execute(arguments: CommandArguments): CommandResponse =
-            CommandResponse(SmtpStatus.CANNOT_VERIFY_USER, "CANNOT VERIFY")
+            CommandResponse(SmtpStatus.CANNOT_VERIFY_USER, "COMMAND DISABLED")
 }
