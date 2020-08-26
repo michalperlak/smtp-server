@@ -5,7 +5,7 @@ import dev.talkischeap.smtp.server.constants.SmtpStatus
 class HelloCommand(
         private val serverHost: String
 ): Command {
-    override val name: String = "HELLO"
+    override val name: String = "HELO"
 
     override fun execute(arguments: CommandArguments): CommandResponse =
             when {
