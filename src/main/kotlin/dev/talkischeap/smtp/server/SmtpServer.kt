@@ -4,6 +4,7 @@ import dev.talkischeap.nio.server.config.ServerConfigurer
 import dev.talkischeap.nio.server.messages.InitMessage
 import dev.talkischeap.smtp.server.commands.parser.CommandParser
 import dev.talkischeap.smtp.server.commands.parser.CommandProducers
+import dev.talkischeap.smtp.server.handler.SmtpMessageHandler
 
 fun main() {
     val server = ServerConfigurer

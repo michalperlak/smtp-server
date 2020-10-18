@@ -1,4 +1,4 @@
-package dev.talkischeap.smtp.server
+package dev.talkischeap.smtp.server.handler
 
 class DataCollector {
     fun collect(data: ByteArray): Boolean {

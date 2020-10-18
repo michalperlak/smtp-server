@@ -1,4 +1,4 @@
-package dev.talkischeap.smtp.server
+package dev.talkischeap.smtp.server.handler
 
 import dev.talkischeap.nio.server.messages.MessageHandler
 import dev.talkischeap.smtp.server.commands.parser.CommandParser
