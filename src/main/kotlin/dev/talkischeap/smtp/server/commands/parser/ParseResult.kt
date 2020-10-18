@@ -6,10 +6,10 @@ import dev.talkischeap.smtp.server.commands.CommandResponse
 
 sealed class ParseResult {
     fun executeOrHandle(errorHandler: (String) -> CommandResponse): CommandResponse =
-            when (this) {
-                is Success -> command.execute(arguments)
-                is Error -> errorHandler(message)
-            }
+        when (this) {
+            is Success -> command.execute(arguments)
+            is Error -> errorHandler(message)
+        }
 
     companion object {
         fun success(command: Command, arguments: CommandArguments): ParseResult = Success(command, arguments)
@@ -18,10 +18,10 @@ sealed class ParseResult {
 }
 
 internal data class Success(
-        val command: Command,
-        val arguments: CommandArguments
+    val command: Command,
+    val arguments: CommandArguments
 ) : ParseResult()
 
 internal data class Error(
-        val message: String
+    val message: String
 ) : ParseResult()
