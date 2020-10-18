@@ -7,6 +7,7 @@ class CommandParser(
 ) {
     fun parse(data: ByteArray): ParseResult {
         val fullCommand = String(data)
+        print(fullCommand)
         val commandName = fullCommand.take(COMMAND_NAME_LENGTH)
         val commandProducer = commandProducers[commandName]
                 ?: return ParseResult.error("Unrecognized command: $fullCommand")
