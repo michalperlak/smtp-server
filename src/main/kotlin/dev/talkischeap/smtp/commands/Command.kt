@@ -1,6 +1,6 @@
-package dev.talkischeap.smtp.server.commands
+package dev.talkischeap.smtp.commands
 
-interface Command {
+internal interface Command {
     val name: String
 
     fun execute(arguments: CommandArguments): CommandResponse

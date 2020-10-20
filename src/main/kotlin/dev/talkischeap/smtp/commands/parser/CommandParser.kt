@@ -1,9 +1,9 @@
-package dev.talkischeap.smtp.server.commands.parser
+package dev.talkischeap.smtp.commands.parser
 
-import dev.talkischeap.smtp.server.commands.CommandArguments
+import dev.talkischeap.smtp.commands.CommandArguments
 import java.nio.charset.Charset
 
-class CommandParser(
+internal class CommandParser(
     private val commandProducers: CommandProducers,
     private val charset: Charset
 ) {

@@ -1,14 +1,13 @@
-package dev.talkischeap.smtp.server.handler.data
+package dev.talkischeap.smtp.handler.data
 
-import dev.talkischeap.smtp.server.Smtp
-import dev.talkischeap.smtp.server.commands.CommandResponse
-import dev.talkischeap.smtp.server.constants.SmtpStatus
-import dev.talkischeap.smtp.server.handler.Handler
-import dev.talkischeap.smtp.server.handler.MessageData
-import dev.talkischeap.smtp.server.handler.MessageResponse
+import dev.talkischeap.smtp.commands.CommandResponse
+import dev.talkischeap.smtp.constants.SmtpStatus
+import dev.talkischeap.smtp.handler.Handler
+import dev.talkischeap.smtp.handler.MessageData
+import dev.talkischeap.smtp.handler.MessageResponse
 import java.nio.charset.Charset
 
-class DataHandler(
+internal class DataHandler(
     private val commandHandler: Handler,
     private val charset: Charset
 ) : Handler {
@@ -42,6 +41,6 @@ class DataHandler(
     companion object {
         private val COLLECTION_FINISHED_RESPONSE =
             CommandResponse(SmtpStatus.REQUESTED_ACTION_COMPLETED, "Ok").format()
-        private const val DATA_END = "${Smtp.MESSAGE_END}.${Smtp.MESSAGE_END}"
+        private const val DATA_END = "${dev.talkischeap.smtp.Smtp.MESSAGE_END}.${dev.talkischeap.smtp.Smtp.MESSAGE_END}"
     }
 }

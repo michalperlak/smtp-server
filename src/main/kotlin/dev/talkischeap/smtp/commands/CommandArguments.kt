@@ -1,6 +1,6 @@
-package dev.talkischeap.smtp.server.commands
+package dev.talkischeap.smtp.commands
 
-class CommandArguments(
+internal class CommandArguments(
     private val arguments: List<String>
 ) {
     fun empty(): Boolean = arguments.isEmpty()

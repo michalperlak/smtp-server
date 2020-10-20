@@ -1,6 +1,6 @@
-package dev.talkischeap.smtp.server.constants
+package dev.talkischeap.smtp.constants
 
-enum class SmtpStatus(
+internal enum class SmtpStatus(
     val code: Int
 ) {
     HELP_RESPONSE(214),

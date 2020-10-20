@@ -1,4 +1,4 @@
-package dev.talkischeap.smtp.server.handler
+package dev.talkischeap.smtp.handler
 
 import dev.talkischeap.nio.server.messages.MessageHandler
 import java.util.concurrent.ConcurrentHashMap
@@ -10,7 +10,7 @@ typealias MessageResponse = ByteArray?
 
 typealias MessageData = ByteArray
 
-class SmtpMessageHandler(
+internal class SmtpMessageHandler(
     private val handlerFactory: () -> Handler
 ) : MessageHandler {
     private val connections: ConcurrentMap<ConnectionId, Handler> = ConcurrentHashMap()

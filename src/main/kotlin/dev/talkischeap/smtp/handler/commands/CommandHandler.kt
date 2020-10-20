@@ -1,15 +1,15 @@
-package dev.talkischeap.smtp.server.handler.commands
+package dev.talkischeap.smtp.handler.commands
 
-import dev.talkischeap.smtp.server.commands.CommandResponse
-import dev.talkischeap.smtp.server.commands.parser.CommandParser
-import dev.talkischeap.smtp.server.constants.SmtpStatus
-import dev.talkischeap.smtp.server.handler.Handler
-import dev.talkischeap.smtp.server.handler.MessageData
-import dev.talkischeap.smtp.server.handler.MessageResponse
-import dev.talkischeap.smtp.server.handler.data.DataHandler
+import dev.talkischeap.smtp.commands.CommandResponse
+import dev.talkischeap.smtp.commands.parser.CommandParser
+import dev.talkischeap.smtp.constants.SmtpStatus
+import dev.talkischeap.smtp.handler.Handler
+import dev.talkischeap.smtp.handler.MessageData
+import dev.talkischeap.smtp.handler.MessageResponse
+import dev.talkischeap.smtp.handler.data.DataHandler
 import java.nio.charset.Charset
 
-class CommandHandler(
+internal class CommandHandler(
     private val commandParser: CommandParser,
     private val dataHandlerFactory: (CommandHandler) -> DataHandler,
     private val charset: Charset

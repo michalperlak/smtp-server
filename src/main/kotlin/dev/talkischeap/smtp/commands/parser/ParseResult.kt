@@ -1,10 +1,10 @@
-package dev.talkischeap.smtp.server.commands.parser
+package dev.talkischeap.smtp.commands.parser
 
-import dev.talkischeap.smtp.server.commands.Command
-import dev.talkischeap.smtp.server.commands.CommandArguments
-import dev.talkischeap.smtp.server.commands.CommandResponse
+import dev.talkischeap.smtp.commands.Command
+import dev.talkischeap.smtp.commands.CommandArguments
+import dev.talkischeap.smtp.commands.CommandResponse
 
-sealed class ParseResult {
+internal sealed class ParseResult {
     fun executeOrHandle(errorHandler: (String) -> CommandResponse): CommandResponse =
         when (this) {
             is Success -> command.execute(arguments)

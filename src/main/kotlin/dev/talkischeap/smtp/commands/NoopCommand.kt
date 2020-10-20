@@ -1,14 +1,14 @@
-package dev.talkischeap.smtp.server.commands
+package dev.talkischeap.smtp.commands
 
-import dev.talkischeap.smtp.server.constants.SmtpStatus
+import dev.talkischeap.smtp.constants.SmtpStatus
 
-class RecipientCommand : Command {
+internal class NoopCommand : Command {
     override val name: String = NAME
 
     override fun execute(arguments: CommandArguments): CommandResponse =
         CommandResponse(SmtpStatus.REQUESTED_ACTION_COMPLETED, "Ok")
 
     companion object {
-        const val NAME: String = "RCPT"
+        const val NAME: String = "NOOP"
     }
 }

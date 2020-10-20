@@ -1,5 +1,5 @@
-package dev.talkischeap.smtp.server.handler
+package dev.talkischeap.smtp.handler
 
-interface Handler {
+internal interface Handler {
     fun handle(data: MessageData): Pair<MessageResponse, Handler>
 }

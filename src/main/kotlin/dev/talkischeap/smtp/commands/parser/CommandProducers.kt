@@ -1,10 +1,10 @@
-package dev.talkischeap.smtp.server.commands.parser
+package dev.talkischeap.smtp.commands.parser
 
-import dev.talkischeap.smtp.server.commands.*
+import dev.talkischeap.smtp.commands.*
 
-typealias CommandProducer = () -> Command
+internal typealias CommandProducer = () -> Command
 
-class CommandProducers(
+internal class CommandProducers(
     private val serverName: String
 ) {
     private val producers: Map<String, CommandProducer> = mapOf(

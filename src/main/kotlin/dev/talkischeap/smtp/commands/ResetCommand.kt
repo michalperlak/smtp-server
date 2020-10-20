@@ -1,8 +1,8 @@
-package dev.talkischeap.smtp.server.commands
+package dev.talkischeap.smtp.commands
 
-import dev.talkischeap.smtp.server.constants.SmtpStatus
+import dev.talkischeap.smtp.constants.SmtpStatus
 
-class ResetCommand : Command {
+internal class ResetCommand : Command {
     override val name: String = NAME
 
     override fun execute(arguments: CommandArguments): CommandResponse =
