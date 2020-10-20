@@ -3,7 +3,7 @@ package dev.talkischeap.smtp.commands.parser
 import dev.talkischeap.smtp.commands.CommandArguments
 import java.nio.charset.Charset
 
-internal class CommandParser(
+internal class CommandParser private constructor(
     private val commandProducers: CommandProducers,
     private val charset: Charset
 ) {
@@ -27,5 +27,8 @@ internal class CommandParser(
 
     companion object {
         private const val COMMAND_NAME_LENGTH = 4
+
+        fun create(serverName: String, charset: Charset): CommandParser =
+            CommandParser(CommandProducers(serverName), charset)
     }
 }
